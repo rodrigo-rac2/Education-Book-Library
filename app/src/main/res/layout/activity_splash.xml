@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_white"
+    tools:context=".SplashActivity"
+    tools:ignore="Overdraw">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/Splash_Lay_Logo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/primary_dark"
+            android:elevation="2dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/default_text_height">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="98dp"
+                android:contentDescription="@string/desc_logotipo_do_aplicativo"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_book" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:lines="1"
+                android:padding="0dp"
+                android:text="Education Book Station"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="0dp"
+                android:text="LIBRARY"
+                android:textColor="@color/white"
+                android:textSize="32sp" />
+
+            <ProgressBar
+                android:id="@+id/Splash_ProgressBarInit"
+                style="@android:style/Widget.DeviceDefault.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/white"
+                android:paddingStart="42dp"
+                android:paddingEnd="42dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Splash_Layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="bottom"
+            android:layout_margin="36dp"
+            android:background="@drawable/bg_container"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:translationY="-52dp"
+            app:layout_anchor="@id/Splash_Lay_Logo"
+            app:layout_anchorGravity="bottom">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:gravity="center"
+                android:lines="1"
+                android:text="@string/biblioteca_online"
+                android:textColor="@color/primary_dark"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:lines="1"
+                android:text="@string/apostilas_atividades_exercicios"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/Splash_Text_Turma"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="@color/white"
+                android:gravity="center"
+                android:textColor="@color/primary_dark"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/selecione_o_ano"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+
+            <com.goodiebag.horizontalpicker.HorizontalPicker
+                android:id="@+id/Splash_Ano"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginBottom="8dp"
+                app:backgroundSelector="@drawable/bg_picker_selector"
+                app:itemHeight="32dp"
+                app:itemMargin="24dp"
+                app:itemWidth="32dp"
+                app:textColorSelector="@color/white"
+                app:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/selecione_a_turma"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+
+            <com.goodiebag.horizontalpicker.HorizontalPicker
+                android:id="@+id/Splash_Turma"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginBottom="8dp"
+                app:backgroundSelector="@drawable/bg_picker_selector"
+                app:itemHeight="32dp"
+                app:itemMargin="24dp"
+                app:itemWidth="32dp"
+                app:textColorSelector="@color/white"
+                app:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_marginBottom="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:paddingTop="6dp"
+                    android:drawableTop="@drawable/ic_book"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="72dp"
+                    android:background="@drawable/bg_button_square"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:text="@string/biblioteca"
+                    android:textColor="@color/white"
+                    tools:ignore="ButtonStyle" />
+
+                <Button
+                    android:paddingTop="6dp"
+                    android:drawableTop="@drawable/ic_file"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="72dp"
+                    android:background="@drawable/bg_button_square"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:text="@string/apostilas"
+                    android:textColor="@color/white"
+                    tools:ignore="ButtonStyle" />
+
+            </LinearLayout>
+
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/primary"
+                android:contentDescription="@string/description_separador" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_button"
+                    android:backgroundTint="#3b5998"
+                    android:clickable="true"
+                    android:drawableStart="@drawable/ic_facebook"
+                    android:focusable="true"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:text="@string/facebook"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    tools:ignore="ButtonStyle" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_button_instagram"
+                    android:clickable="true"
+                    android:drawableStart="@drawable/ic_instagram"
+                    android:focusable="true"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:text="@string/instagram"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    tools:ignore="ButtonStyle" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="@string/nossa_escola_no_maps"
+                android:textColor="@color/primary_dark"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:drawableStartCompat="@drawable/ic_pin" />
+
+        </LinearLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bg_infos"
+        android:backgroundTint="@color/gray_white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="@string/github"
+            android:src="@drawable/ic_github"
+            app:tint="@color/primary" />
+
+        <TextView
+            android:id="@+id/Splash_Version"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/primary"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:lines="1"
+            android:text="@string/info_authors"
+            android:textColor="@color/primary"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:lines="1"
+            android:text="@string/info_know_more"
+            android:textColor="@color/primary"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:tint="@color/primary"
+        android:layout_gravity="center"
+        android:src="@drawable/bg_ripple"
+        android:visibility="gone"
+        tools:ignore="ContentDescription" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:indeterminateTint="@color/white" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/carregando"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</FrameLayout>

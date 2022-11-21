@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">BookLib</string>
+    <string name="desc_logotipo_do_aplicativo">Logotipo do Aplicativo</string>
+
+    <string name="carregando">CARREGANDO</string>
+
+    <string name="facebook">Facebook</string>
+    <string name="instagram">Instagram</string>
+    <string name="github">GitHub</string>
+    <string name="nossa_escola_no_maps">Nossa escola no Maps</string>
+    <string name="apostilas_atividades_exercicios">APOSTILAS - LIVROS - EXERCÍCIOS</string>
+    <string name="description_separador">Separador</string>
+    <string name="biblioteca">Livros</string>
+    <string name="selecione_o_ano">Selecione o Ano</string>
+    <string name="selecione_a_turma">Selecione a Turma</string>
+
+    <string name="info_authors">Developed DevFireClub</string>
+    <string name="info_know_more">Toque para ler mais sobre atribuições, licenças e desenvolvimento.</string>
+    <string name="apostilas">Apostilas</string>
+    <string name="biblioteca_online">Biblioteca Online</string>
+
+</resources>
