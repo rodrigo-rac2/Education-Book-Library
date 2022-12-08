@@ -163,7 +163,7 @@ public class SplashActivity extends AppCompatActivity {
             if (!statusPaint.get() && (int) animation.getAnimatedValue() > getResources().getDisplayMetrics().heightPixels) {
                 statusPaint.set(true);
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                    getWindow().setStatusBarColor(Color.parseColor("#66BB6A"));
+                    getWindow().setStatusBarColor(Color.parseColor("#223843"));
                 }
             }
             ViewGroup.LayoutParams params = ripple.getLayoutParams();
@@ -202,7 +202,4 @@ public class SplashActivity extends AppCompatActivity {
         String mTurma = mPickerTurma.getSelectedItem().getText();
         mTextTurma.setText(String.format(Locale.getDefault(), "%s%s - %s %s", mAno, (!mAno.equals("EJA") ? "º Ano" : ""), (!mAno.equals("EJA") ? "Turma" : "Módulo"), mTurma));
     }
-
-
-
 }

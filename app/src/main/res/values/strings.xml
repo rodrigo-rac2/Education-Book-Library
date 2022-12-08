@@ -27,6 +27,7 @@
     <string name="biblioteca">Livros</string>
     <string name="selecione_o_ano">Selecione o Ano</string>
     <string name="selecione_a_turma">Selecione a Turma</string>
+    <string name="baixar">Abrir</string>
 
     <string name="info_authors">Developed DevFireClub</string>
     <string name="info_know_more">Toque para ler mais sobre atribuições, licenças e desenvolvimento.</string>
