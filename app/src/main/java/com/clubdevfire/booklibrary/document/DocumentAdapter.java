@@ -48,11 +48,11 @@ public class DocumentAdapter extends RecyclerView.Adapter<DocumentAdapter.Docume
     @Override
     public int getItemCount() {
         return documentList.size();
-
     }
 
     public void addDocument(Document doc) {
         doc.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         documentList.add(doc);
     }
+
 }

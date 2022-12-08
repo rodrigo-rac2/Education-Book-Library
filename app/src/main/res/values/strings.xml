@@ -2,6 +2,11 @@
     <string name="app_name">BookLib</string>
     <string name="desc_logotipo_do_aplicativo">Logotipo do Aplicativo</string>
 
+    <string name="erro_carregar_documentos">Erro ao carregar documentos. Cheque sua conexão com a internet ou tente novamente em alguns minutos.</string>
+    <string name="erro_carregar_livros">Erro ao carregar livros. Cheque sua conexão com a internet ou tente novamente em alguns minutos.</string>
+    <string name="erro_carregar_lista">Não foi possível dados salvos. Você não poderá marcar documentos.</string>
+    <string name="erro_carregar_checks">Não foi possivel carregar suas marcações nos documentos.</string>
+
     <string name="por_favor_aguarde">POR FAVOR, AGUARDE</string>
     <string name="carregando">CARREGANDO</string>
     <string name="voltar">VOLTAR</string>
@@ -31,6 +36,15 @@
 
     <string name="info_authors">Developed DevFireClub</string>
     <string name="info_know_more">Toque para ler mais sobre atribuições, licenças e desenvolvimento.</string>
+    <string name="wait">Aguarde…</string>
+    <string name="enviado">Enviado!</string>
+    <string name="error_reporting">Reportar Erro</string>
+    <string name="send_erro">Ao tocar no botão abaixo você enviará um relatório desse erro para nossa equipe, assim podemos trabalhar para corrigi-lo. Esse relatório contém apenas detalhes sobre a execução desse aplicativo, não coletamos dados pessoais ou qualquer recurso de mídia do seu aparelho. (Requer conexão com a internet).</string>
+    <string name="send_to_analysis">Enviar para Análise</string>
     <string name="apostilas">Apostilas</string>
     <string name="biblioteca_online">Biblioteca Online</string>
+    <string name="vazio_library">AINDA NÃO HÁ LIVROS AQUI</string>
+    <string name="ler">Ler</string>
+    <string name="capa_do_livro">Capa do Livro</string>
+    <string name="capa_carregando">capa_carregando</string>
 </resources>

@@ -14,27 +14,27 @@ import java.io.IOException;
 import java.util.Locale;
 
 public class Document extends RelativeLayout {
-
+    
     public Document(Context context) {
         super(context);
     }
-
+    
     public Document(int id, String title, String author, String date, String uri, Context context) {
         super(context);
         setup(id, title, author, date, uri, context);
     }
-
+    
     public void setup(int id, String title, String author, String date, String uri, Context context) {
         inflate(context, R.layout.layout_document, this);
-
+        
         TextView mTitle = findViewById(R.id.Document_Title);
         TextView mAuthor = findViewById(R.id.Document_Author);
         TextView mDate = findViewById(R.id.Document_Date);
         TextView mId = findViewById(R.id.Document_Id);
         CheckBox mCheck = findViewById(R.id.Document_Check);
-
+        
         if (DocumentUtils.CheckIsChecked(id)) mCheck.setChecked(true);
-
+        
         mTitle.setText(title);
         mAuthor.setText(author);
         mDate.setText(date);
@@ -47,7 +47,7 @@ public class Document extends RelativeLayout {
                 mTitle.setError("Não foi possivel marcar este documento.");
             }
         });
-
+        
         findViewById(R.id.Document_DownloadButton).setOnClickListener(v -> {
             try {
                 context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(uri)));

@@ -1,11 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".LibraryActivity">
 
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/primary_dark"
+        android:elevation="2dp"
+        android:theme="@style/Theme.EMJPSEAD.AppBarOverlay">
 
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/default_text_height"
+                android:layout_gravity="end"
+                android:layout_marginStart="@dimen/default_padding"
+                android:layout_marginLeft="@dimen/default_padding"
+                android:background="@drawable/bg_title"
+                android:backgroundTint="@color/white"
+                android:elevation="2dp"
+                android:gravity="center"
+                android:padding="6dp"
+                android:text="@string/biblioteca_online"
+                android:paddingStart="110dp"
+                android:paddingLeft="110dp"
+                android:paddingEnd="@dimen/default_padding"
+                android:paddingRight="@dimen/default_padding"
+                android:textAllCaps="true"
+                android:textColor="@color/primary_dark"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/Library_Button_Back"
+                android:layout_width="120dp"
+                android:layout_height="@dimen/default_text_height"
+                android:layout_gravity="start"
+                android:background="@drawable/bg_button"
+                android:backgroundTint="@color/primary"
+                android:clickable="true"
+                android:drawableStart="@drawable/ic_back"
+                android:elevation="4dp"
+                android:focusable="true"
+                android:lines="1"
+                android:paddingStart="12dp"
+                android:paddingEnd="24dp"
+                android:text="@string/voltar"
+                android:textColor="@color/white"
+                android:drawableLeft="@drawable/ic_back"
+                android:paddingLeft="12dp"
+                android:paddingRight="24dp" />
+        </FrameLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <FrameLayout
+        android:id="@+id/Library_FrameLayout_ListLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:backgroundTint="@color/gray_white">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/Library_RecyclerView_List"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@android:color/transparent"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="12dp"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager" />
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/Library_LinearLayout_Loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:layout_width="92dp"
+                android:layout_height="92dp"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="4dp"
+                android:gravity="center"
+                android:text="@string/carregando"
+                android:textColor="@color/gray"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Library_LinearLayout_Empty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="92dp"
+                android:layout_height="92dp"
+                android:contentDescription="@string/vazio"
+                android:scaleType="fitEnd"
+                android:src="@drawable/ic_book"
+                app:tint="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="4dp"
+                android:gravity="center"
+                android:text="@string/vazio_library"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="4dp"
+                android:gravity="center"
+                android:text="@string/por_favor_aguarde"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </FrameLayout>
 
 </LinearLayout>

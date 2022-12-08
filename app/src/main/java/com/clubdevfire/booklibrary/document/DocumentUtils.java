@@ -11,7 +11,6 @@ import java.nio.charset.StandardCharsets;
 import java.util.HashSet;
 
 public class DocumentUtils {
-
     public static final String FILE_NAME = "DocumentosMarcados.list";
     private static final HashSet<Integer> mDocumentsChecks = new HashSet<>();
 
@@ -55,4 +54,5 @@ public class DocumentUtils {
     public static boolean CheckIsChecked(int id) {
         return mDocumentsChecks.contains(id);
     }
+
 }
