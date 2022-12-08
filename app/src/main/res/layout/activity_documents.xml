@@ -1,9 +1,221 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".DocumentsActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/primary_dark"
+        android:elevation="2dp"
+        android:theme="@style/Theme.EMJPSEAD.AppBarOverlay">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/Documents_TextView_Turma"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/default_text_height"
+                android:layout_gravity="end"
+                android:layout_marginStart="@dimen/default_padding"
+                android:layout_marginLeft="@dimen/default_padding"
+                android:background="@drawable/bg_title"
+                android:backgroundTint="@color/white"
+                android:elevation="2dp"
+                android:gravity="center"
+                android:padding="6dp"
+                android:paddingStart="110dp"
+                android:paddingLeft="110dp"
+                android:paddingEnd="@dimen/default_padding"
+                android:paddingRight="@dimen/default_padding"
+                android:textAllCaps="true"
+                android:textColor="@color/primary_dark"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/Documents_Button_Back"
+                android:layout_width="120dp"
+                android:layout_height="@dimen/default_text_height"
+                android:layout_gravity="start"
+                android:background="@drawable/bg_button"
+                android:backgroundTint="@color/primary"
+                android:clickable="true"
+                android:drawableStart="@drawable/ic_back"
+                android:drawableLeft="@drawable/ic_back"
+                android:elevation="4dp"
+                android:focusable="true"
+                android:lines="1"
+                android:paddingStart="12dp"
+                android:paddingLeft="12dp"
+                android:paddingEnd="24dp"
+                android:paddingRight="24dp"
+                android:text="@string/voltar"
+                android:textColor="@color/white" />
+        </FrameLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/Documents_TabLayout_Tabs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/primary_dark"
+            app:tabGravity="start"
+            app:tabIndicatorColor="@color/primary"
+            app:tabIndicatorHeight="8dp"
+            app:tabMode="scrollable"
+            app:tabTextAppearance="@style/Tabs">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:icon="@drawable/ic_portugues"
+                android:text="@string/disciplina_portugues" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:icon="@drawable/ic_matematica"
+                android:text="@string/disciplina_matematica" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:icon="@drawable/ic_ciencias"
+                android:text="@string/disciplina_ciencias" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:icon="@drawable/ic_geografia"
+                android:text="@string/disciplina_geografia" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:icon="@drawable/ic_historia"
+                android:text="@string/disciplina_historia" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:icon="@drawable/ic_ingles"
+                android:text="@string/disciplina_ingles" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:icon="@drawable/ic_artes"
+                android:text="@string/disciplina_artes" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:icon="@drawable/ic_ed_fisica"
+                android:text="@string/disciplina_ed_fisica" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:icon="@drawable/ic_religiao"
+                android:text="@string/disciplina_religiao" />
+        </com.google.android.material.tabs.TabLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <FrameLayout
+        android:id="@+id/Documents_FrameLayout_ListLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:backgroundTint="@color/gray_white">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/Documents_RecyclerView_List"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@android:color/transparent"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="12dp"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager" />
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/Documents_LinearLayout_Loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:layout_width="92dp"
+                android:layout_height="92dp"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="4dp"
+                android:gravity="center"
+                android:text="@string/carregando"
+                android:textColor="@color/gray"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Documents_LinearLayout_Empty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="92dp"
+                android:layout_height="92dp"
+                android:contentDescription="@string/vazio"
+                android:scaleType="fitEnd"
+                android:src="@drawable/ic_folder"
+                app:tint="@color/gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="4dp"
+                android:gravity="center"
+                android:text="@string/vazio"
+                android:textColor="@color/gray"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="4dp"
+                android:gravity="center"
+                android:text="@string/por_favor_aguarde"
+                android:textColor="@color/gray"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </FrameLayout>
 
 </LinearLayout>
