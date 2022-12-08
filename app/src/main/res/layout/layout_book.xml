@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="132dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/bg_container"
+    android:baselineAligned="false"
+    android:elevation="4dp"
+    android:gravity="start"
+    android:orientation="horizontal">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="72dp"
+        android:layout_height="108dp"
+        android:layout_margin="12dp"
+        app:cardCornerRadius="4dp">
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/capa_carregando"
+            android:src="@drawable/ic_img"
+            app:tint="@color/gray" />
+
+        <ImageView
+            android:id="@+id/Book_Image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/capa_do_livro"
+            android:scaleType="fitXY" />
+
+
+        <TextView
+            android:gravity="center|bottom"
+            android:background="@drawable/bg_book_id"
+            android:id="@+id/Book_Id"
+            android:layout_width="match_parent"
+            android:paddingBottom="2dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center|bottom"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/Book_Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:textColor="@color/primary_dark"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+
+            android:id="@+id/Book_Author"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:lines="1"
+            android:textColor="@color/primary_dark"
+            android:textSize="14sp"
+            android:textStyle="normal" />
+
+        <TextView
+
+            android:id="@+id/Book_Editor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Book_Author"
+            android:layout_marginEnd="12dp"
+            android:lines="1"
+            android:textColor="@color/gray"
+            android:textSize="14sp"
+            android:textStyle="normal" />
+
+        <Button
+            android:id="@+id/Book_DownloadButton"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/bg_button_foreground"
+            android:clickable="true"
+            android:drawableStart="@drawable/ic_book"
+            android:drawablePadding="10dp"
+            android:focusable="true"
+            android:gravity="center"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:paddingEnd="42dp"
+            android:paddingRight="42dp"
+            android:text="@string/ler"
+            android:textColor="@color/white"
+            app:drawableTint="@color/white" />
+    </LinearLayout>
+
+
+
+</LinearLayout>

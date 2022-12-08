@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/Message_Root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gray_white"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
+        android:text="@string/error_reporting"
+        android:textAllCaps="true"
+        android:textColor="@color/primary_dark"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        style="@style/justified_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="@string/send_erro"
+        android:textStyle="bold" />
+
+
+    <Button
+        android:id="@+id/Message_Button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_text_height"
+        android:background="@drawable/bg_button"
+        android:clickable="true"
+        android:drawableStart="@drawable/ic_check"
+        android:focusable="true"
+        android:paddingStart="8dp"
+        android:paddingEnd="36dp"
+        android:text="@string/send_to_analysis"
+        android:textColor="@color/white"
+        app:drawableTint="@color/white"
+        android:drawableLeft="@drawable/ic_check"
+        android:paddingLeft="8dp"
+        android:paddingRight="36dp" />
+
+</LinearLayout>
