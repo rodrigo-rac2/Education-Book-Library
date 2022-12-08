@@ -28,6 +28,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    namespace 'com.clubdevfire.booklibrary'
 }
 
 repositories {
@@ -39,6 +40,7 @@ repositories {
 }
 
 dependencies {
+    //noinspection GradleDependency
     implementation 'org.postgresql:postgresql:9.4.1207'
     implementation 'com.github.GoodieBag:HorizontalPicker:v1.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'

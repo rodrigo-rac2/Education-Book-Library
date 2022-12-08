@@ -156,6 +156,7 @@
                     android:paddingTop="6dp"
                     android:drawableTop="@drawable/ic_book"
                     android:layout_margin="4dp"
+                    android:id="@+id/Splash_Library"
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="72dp"
@@ -170,6 +171,7 @@
                     android:paddingTop="6dp"
                     android:drawableTop="@drawable/ic_file"
                     android:layout_margin="4dp"
+                    android:id="@+id/Splash_Button"
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="72dp"
@@ -295,6 +297,7 @@
     </LinearLayout>
 
     <ImageView
+        android:id="@+id/Splash_Lay_Ripple"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:tint="@color/primary"
@@ -304,6 +307,7 @@
         tools:ignore="ContentDescription" />
 
     <LinearLayout
+        android:id="@+id/Splash_Lay_Loading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

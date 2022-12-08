@@ -2,5 +2,4 @@
 <full-backup-content>
     <include domain="sharedpref" path="."/>
     <include domain="file" path="."/>
-
 </full-backup-content>
